@@ -17,9 +17,10 @@ export default function MyForm() {
         }}
       />
 
+
       <input
         type="text"
-        placeholder="email..."
+        placeholder="email...."
         value={formInps.userEmail}
         onChange={(e) => {
           setFormInps({ ...formInps, userEmail: e.target.value });
