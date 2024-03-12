@@ -10,7 +10,7 @@ export default function MyForm() {
         placeholder="name..."
         value={formInps.userName}
         onChange={(e) => {
-          setFormInps({userName:e.target.value});
+          setFormInps({userName:e.target.value, userEmail:formInps.userEmail});
         }}
       />
 
@@ -19,7 +19,7 @@ export default function MyForm() {
         placeholder="email..."
         value={formInps.userEmail}
         onChange={(e) => {
-          setFormInps({userEmail:e.target.value});
+          setFormInps({userEmail:e.target.value, userName:formInps.userName});
         }}
       />
 
