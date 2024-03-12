@@ -1,9 +1,9 @@
-import MyBtn from "./MyBtn";
-import MyInpt from "./MyInpt";
+import MyForm from "./MyForm";
+
 function App() {
-  return <div className="App"> <MyBtn /> <MyInpt /> </div>;
+  return <div className="App"> <MyForm /> </div>;
 }
 
-// condition rendering
+
 
 export default App;
