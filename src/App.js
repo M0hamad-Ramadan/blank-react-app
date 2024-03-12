@@ -1,24 +1,8 @@
-import Header from "./components/Header";
-import Posts from "./components/Posts";
-
-let check = true;
-
+import List from "./components/List";
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <AllPosts />
-    </div>
-  );
+  return <div className="App"> <List /></div>;
 }
 
 // condition rendering
-
-function AllPosts() {
-  if (check) {
-    return <Posts title={"posts"} />;
-  }
-  return <></>;
-}
 
 export default App;
