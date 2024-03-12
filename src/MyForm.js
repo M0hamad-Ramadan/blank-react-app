@@ -1,25 +1,25 @@
 import { useState } from "react";
 
 export default function MyForm() {
-  const [userName, setUserName] = useState("");
-  const [userEmail, setuserEmail] = useState("");
+  const [formInps, setFormInps] = useState({userName:'', userEmail:''});
+
   return (
     <form onSubmit={(e)=>{e.preventDefault()}}>
       <input
         type="text"
         placeholder="name..."
-        value={userName}
+        value={formInps.userName}
         onChange={(e) => {
-          setUserName(e.target.value);
+          setFormInps({userName:e.target.value});
         }}
       />
 
       <input
         type="text"
         placeholder="email..."
-        value={userEmail}
+        value={formInps.userEmail}
         onChange={(e) => {
-          setuserEmail(e.target.value);
+          setFormInps({userEmail:e.target.value});
         }}
       />
 
