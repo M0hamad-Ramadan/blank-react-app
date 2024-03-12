@@ -1,6 +1,6 @@
-import List from "./components/List";
+import MyBtn from "./MyBtn";
 function App() {
-  return <div className="App"> <List /></div>;
+  return <div className="App"> <MyBtn /> </div>;
 }
 
 // condition rendering
