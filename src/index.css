@@ -29,3 +29,21 @@ code {
   gap: 25px;
 
 }
+
+
+form {
+
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+
+label {
+  display: inline-block;
+  width: 50px;
+}
+
+.inp-group{
+  margin: 5px;
+}
