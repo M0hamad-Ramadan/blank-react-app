@@ -36,7 +36,7 @@ form {
   background-color: #ddd;
   padding: 10px;
   border-radius: 5px;
-
+  text-align: left;
 }
 
 label {
@@ -45,5 +45,5 @@ label {
 }
 
 .inp-group{
-  margin: 5px;
+  margin: 8px;
 }

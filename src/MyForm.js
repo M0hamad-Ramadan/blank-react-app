@@ -7,6 +7,7 @@ const MyForm = () => {
     peo: "",
     male: false,
     fmale: false,
+    lang: "",
   });
   return (
     <form
@@ -18,7 +19,7 @@ const MyForm = () => {
         <label>name:</label>
         <input
           type="text"
-          value={myFormData.name}
+          defaultValue={myFormData.name}
           onChange={(e) => {
             setNewState({ ...myFormData, name: e.target.value });
           }}
@@ -29,7 +30,7 @@ const MyForm = () => {
         <label>email:</label>
         <input
           type="text"
-          value={myFormData.email}
+          defaultValue={myFormData.email}
           onChange={(e) => {
             setNewState({ ...myFormData, email: e.target.value });
           }}
@@ -40,7 +41,7 @@ const MyForm = () => {
         <label>Peo:</label>
         <textarea
           type="text"
-          value={myFormData.peo}
+          defaultValue={myFormData.peo}
           onChange={(e) => {
             setNewState({ ...myFormData, peo: e.target.value });
           }}
@@ -67,6 +68,39 @@ const MyForm = () => {
             setNewState({ ...myFormData, fmale: e.target.checked });
           }}
         />
+      </div>
+
+      <div className="inp-group">
+        <p>Please select Web language:</p>
+        <input
+          type="radio"
+          name="fav_language"
+          value="HTML"
+          onChange={(e) => {
+            setNewState({ ...myFormData, lang: e.target.value });
+          }}
+        />
+        &nbsp; <label htmlFor="html">HTML</label>
+        <br />
+        <input
+          type="radio"
+          name="fav_language"
+          value="CSS"
+          onChange={(e) => {
+            setNewState({ ...myFormData, lang: e.target.value });
+          }}
+        />
+        &nbsp; <label htmlFor="css">CSS</label>
+        <br />
+        <input
+          type="radio"
+          name="fav_language"
+          value="JavaScript"
+          onChange={(e) => {
+            setNewState({ ...myFormData, lang: e.target.value });
+          }}
+        />
+        &nbsp; <label htmlFor="javascript">JavaScript</label>
       </div>
 
       <button>Submit</button>
