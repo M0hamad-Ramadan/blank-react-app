@@ -2,47 +2,24 @@ import { useState } from "react";
 
 const MyForm = () => {
   const [myFormData, setNewState] = useState({ status: "" });
+
+  function handleSelect(e){
+    setNewState(myFormData.status = {...myFormData, status: e.target.value}) 
+  }
+
   return (
     <form
       onSubmit={(e) => {
         e.preventDefault();
         console.log(myFormData);
       }}>
-      <div className="inp-group">
-        <p>Please select Web language:</p>
-        <input
-          type="radio"
-          name="status"
-          value="HTML"
-          checked={myFormData.status === "HTML"}
-          onChange={(e) => {
-            setNewState({ ...myFormData, status: e.target.value });
-          }}
-        />
-        &nbsp; <label htmlFor="html">HTML</label>
-        <br />
-        <input
-          type="radio"
-          name="status"
-          value="CSS"
-          checked={myFormData.status === "CSS"}
-          onChange={(e) => {
-            setNewState({ ...myFormData, status: e.target.value });
-          }}
-        />
-        &nbsp; <label htmlFor="css">CSS</label>
-        <br />
-        <input
-          type="radio"
-          name="status"
-          value="JavaScript"
-          checked={myFormData.status === "JavaScript"}
-          onChange={(e) => {
-            setNewState({ ...myFormData, status: e.target.value });
-          }}
-        />
-        &nbsp; <label htmlFor="javascript">JavaScript</label>
-      </div>
+      
+      <select value={myFormData.status} onChange={handleSelect}>
+        <option>Html</option>
+        <option>css</option>
+        <option>js</option>
+        <option>svg</option>
+      </select>
 
       <br></br>
       <br></br>
